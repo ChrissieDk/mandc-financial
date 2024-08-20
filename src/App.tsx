@@ -10,7 +10,7 @@ import ContactUs from "./components/contactUs";
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <Router basename="/mandc-financial">
       <div>
         <NavBar />
         <Routes>
