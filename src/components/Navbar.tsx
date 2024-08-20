@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/LOGO_WHITE.png";
 
 const NavBar: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>("Home");
+  const location = useLocation();
+  const [activeTab, setActiveTab] = useState<string>("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
@@ -20,10 +21,19 @@ const NavBar: React.FC = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    const pathname = location.pathname;
+    if (pathname === "/") setActiveTab("Home");
+    else if (pathname === "/about") setActiveTab("About us");
+    else if (pathname === "/products") setActiveTab("Products");
+    else if (pathname === "/contact-us") setActiveTab("Contact Us");
+    else setActiveTab("");
+  }, [location]);
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <nav className="bg-darkGreen flex flex-wrap justify-between items-center pl-8 pr-4 pt-4 pb-4 sticky top-0">
+    <nav className="bg-darkGreen flex flex-wrap justify-between items-center pl-8 pr-4 pt-4 pb-4 sticky top-0 z-50">
       {/* Logo on the left */}
       <div className="flex-shrink-0">
         <img src={logo} alt="m&c logo" className="w-20 lg:w-36 h-12 lg:h-20" />
@@ -54,12 +64,10 @@ const NavBar: React.FC = () => {
               ? "text-brightGreen border-b-2 border-brightGreen"
               : ""
           }`}
-          onClick={() => {
-            setActiveTab("Home");
-            setIsMenuOpen(false);
-          }}
         >
-          <Link to="/">Home</Link>
+          <Link to="/" onClick={() => setIsMenuOpen(false)}>
+            Home
+          </Link>
         </li>
         <li
           className={`cursor-pointer pb-2 ${
@@ -67,12 +75,32 @@ const NavBar: React.FC = () => {
               ? "text-brightGreen border-b-2 border-brightGreen"
               : ""
           }`}
-          onClick={() => {
-            setActiveTab("About us");
-            setIsMenuOpen(false);
-          }}
         >
-          <Link to="/about">About us</Link>
+          <Link to="/about" onClick={() => setIsMenuOpen(false)}>
+            About us
+          </Link>
+        </li>
+        <li
+          className={`cursor-pointer pb-2 ${
+            activeTab === "Products"
+              ? "text-brightGreen border-b-2 border-brightGreen"
+              : ""
+          }`}
+        >
+          <Link to="/products" onClick={() => setIsMenuOpen(false)}>
+            Products/Services
+          </Link>
+        </li>
+        <li
+          className={`cursor-pointer pb-2 ${
+            activeTab === "Contact Us"
+              ? "text-brightGreen border-b-2 border-brightGreen"
+              : ""
+          }`}
+        >
+          <Link to="/contact-us" onClick={() => setIsMenuOpen(false)}>
+            Contact Us
+          </Link>
         </li>
       </ul>
 

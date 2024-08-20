@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import image1 from "../assets/AdobeStock_330780507.jpeg";
 import image2 from "../assets/AdobeStock_479298638.jpeg";
 import image3 from "../assets/AdobeStock_583765649.jpeg";
@@ -30,9 +31,16 @@ const HeroSection: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-            <button className="border-2 border-brightGreen text-brightGreen font-bold py-2 px-4 rounded hover:bg-brightGreen hover:text-black">
+            {/* <button className="border-2 border-brightGreen text-brightGreen font-bold py-2 px-4 rounded hover:bg-brightGreen hover:text-black">
               Talk to us
-            </button>
+            </button> */}
+            {/* change the button up top to link via Link to the contact us page  */}
+            <Link
+              to="/contact-us"
+              className="border-2 border-brightGreen text-brightGreen font-bold py-2 px-4 rounded hover:bg-brightGreen hover:text-black"
+            >
+              Contact Us
+            </Link>
           </div>
         </div>
 
