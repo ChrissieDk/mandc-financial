@@ -1,72 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { CommissionEntry } from "../Types";
 import CommissionTable from "./ComissionTable";
-import {
-  Document,
-  Page,
-  Text,
-  View,
-  StyleSheet,
-  PDFViewer,
-} from "@react-pdf/renderer";
+import { PDFViewer } from "@react-pdf/renderer";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
+import PdfDocGenerate from "./PdfDocGenerate";
 
 // Create styles for PDF
-const styles = StyleSheet.create({
-  page: {
-    padding: 30,
-    fontSize: 10,
-  },
-  title: {
-    fontSize: 18,
-    marginBottom: 10,
-    textAlign: "center",
-    fontWeight: "bold",
-  },
-  subtitle: {
-    fontSize: 12,
-    marginBottom: 6,
-  },
-  table: {
-    display: "flex",
-    width: "auto",
-    borderStyle: "solid",
-    borderWidth: 1,
-    borderRightWidth: 0,
-    borderBottomWidth: 0,
-    marginTop: 10,
-  },
-  tableRow: {
-    flexDirection: "row",
-  },
-  tableColHeader: {
-    width: "10%",
-    borderStyle: "solid",
-    borderWidth: 1,
-    borderLeftWidth: 0,
-    borderTopWidth: 0,
-    backgroundColor: "#f0f0f0",
-    padding: 5,
-  },
-  tableCol: {
-    width: "10%",
-    borderStyle: "solid",
-    borderWidth: 1,
-    borderLeftWidth: 0,
-    borderTopWidth: 0,
-    padding: 5,
-  },
-  tableCellHeader: {
-    fontSize: 8,
-    fontWeight: "bold",
-    textAlign: "center",
-  },
-  tableCell: {
-    fontSize: 8,
-    textAlign: "center",
-  },
-});
 
 const Dashboard: React.FC = () => {
   const [commissions, setCommissions] = useState<CommissionEntry[]>([]);
@@ -76,6 +16,48 @@ const Dashboard: React.FC = () => {
     // Fetch mock data
     const fetchCommissionData = () => {
       const mockData: CommissionEntry[] = [
+        {
+          Region: "LIBCO-PE",
+          Brokerage: "Randmore Investments CC",
+          POLICY_NUMBER: "1151982573",
+          PH_SURNAME: "MHLONGO",
+          LOAD_DATE: "2013/03/04",
+          ORIGINAL_PAYMOD: "G - Stop Order",
+          POLICY_STATUS: "ACTIVE",
+          PREMIUM: 150,
+          SETTLEMENT_DATE: "2013/03/10",
+          COMISSION_DESCRIPTION: "First Year Commission",
+          AMOUNT_DUE: 120,
+          COMM_TYPE: "First Year",
+        },
+        {
+          Region: "LIBCO-PE",
+          Brokerage: "Randmore Investments CC",
+          POLICY_NUMBER: "1151982573",
+          PH_SURNAME: "MHLONGO",
+          LOAD_DATE: "2013/03/04",
+          ORIGINAL_PAYMOD: "G - Stop Order",
+          POLICY_STATUS: "ACTIVE",
+          PREMIUM: 150,
+          SETTLEMENT_DATE: "2013/03/10",
+          COMISSION_DESCRIPTION: "First Year Commission",
+          AMOUNT_DUE: 120,
+          COMM_TYPE: "First Year",
+        },
+        {
+          Region: "LIBCO-PE",
+          Brokerage: "Randmore Investments CC",
+          POLICY_NUMBER: "1151982573",
+          PH_SURNAME: "MHLONGO",
+          LOAD_DATE: "2013/03/04",
+          ORIGINAL_PAYMOD: "G - Stop Order",
+          POLICY_STATUS: "ACTIVE",
+          PREMIUM: 150,
+          SETTLEMENT_DATE: "2013/03/10",
+          COMISSION_DESCRIPTION: "First Year Commission",
+          AMOUNT_DUE: 120,
+          COMM_TYPE: "First Year",
+        },
         {
           Region: "LIBCO-PE",
           Brokerage: "Randmore Investments CC",
@@ -133,89 +115,6 @@ const Dashboard: React.FC = () => {
   const uniqueBrokerages = [...new Set(commissions.map((c) => c.Brokerage))];
 
   // PDF Document component
-  const PDFDocGenerate = () => (
-    <Document>
-      <Page size="A4" style={styles.page}>
-        <Text style={styles.title}>Commission Report</Text>
-        <Text style={styles.subtitle}>
-          Total Commission: R {totalCommission.toFixed(2)}
-        </Text>
-        <Text style={styles.subtitle}>
-          Number of Brokerages: {uniqueBrokerages.length}
-        </Text>
-        <View style={styles.table}>
-          <View style={styles.tableRow}>
-            <View style={styles.tableColHeader}>
-              <Text style={styles.tableCellHeader}>Region</Text>
-            </View>
-            <View style={styles.tableColHeader}>
-              <Text style={styles.tableCellHeader}>Brokerage</Text>
-            </View>
-            <View style={styles.tableColHeader}>
-              <Text style={styles.tableCellHeader}>Policy Number</Text>
-            </View>
-            <View style={styles.tableColHeader}>
-              <Text style={styles.tableCellHeader}>Load Date</Text>
-            </View>
-            <View style={styles.tableColHeader}>
-              <Text style={styles.tableCellHeader}>Status</Text>
-            </View>
-            <View style={styles.tableColHeader}>
-              <Text style={styles.tableCellHeader}>Premium</Text>
-            </View>
-            <View style={styles.tableColHeader}>
-              <Text style={styles.tableCellHeader}>Settlement Date</Text>
-            </View>
-            <View style={styles.tableColHeader}>
-              <Text style={styles.tableCellHeader}>Surname</Text>
-            </View>
-            <View style={styles.tableColHeader}>
-              <Text style={styles.tableCellHeader}>Amount Due</Text>
-            </View>
-            <View style={styles.tableColHeader}>
-              <Text style={styles.tableCellHeader}>Comm Type</Text>
-            </View>
-          </View>
-          {commissions.map((comm, index) => (
-            <View style={styles.tableRow} key={index}>
-              <View style={styles.tableCol}>
-                <Text style={styles.tableCell}>{comm.Region}</Text>
-              </View>
-              <View style={styles.tableCol}>
-                <Text style={styles.tableCell}>{comm.Brokerage}</Text>
-              </View>
-              <View style={styles.tableCol}>
-                <Text style={styles.tableCell}>{comm.POLICY_NUMBER}</Text>
-              </View>
-              <View style={styles.tableCol}>
-                <Text style={styles.tableCell}>{comm.LOAD_DATE}</Text>
-              </View>
-              <View style={styles.tableCol}>
-                <Text style={styles.tableCell}>{comm.POLICY_STATUS}</Text>
-              </View>
-              <View style={styles.tableCol}>
-                <Text style={styles.tableCell}>{comm.PREMIUM}</Text>
-              </View>
-              <View style={styles.tableCol}>
-                <Text style={styles.tableCell}>{comm.SETTLEMENT_DATE}</Text>
-              </View>
-              <View style={styles.tableCol}>
-                <Text style={styles.tableCell}>{comm.PH_SURNAME}</Text>
-              </View>
-              <View style={styles.tableCol}>
-                <Text style={styles.tableCell}>
-                  R {comm.AMOUNT_DUE.toFixed(2)}
-                </Text>
-              </View>
-              <View style={styles.tableCol}>
-                <Text style={styles.tableCell}>{comm.COMM_TYPE}</Text>
-              </View>
-            </View>
-          ))}
-        </View>
-      </Page>
-    </Document>
-  );
 
   return (
     <div className="p-6">
@@ -263,7 +162,11 @@ const Dashboard: React.FC = () => {
             </div>
             <div className="flex-grow">
               <PDFViewer width="100%" height="100%">
-                <PDFDocGenerate />
+                <PdfDocGenerate
+                  commissions={commissions}
+                  totalCommission={totalCommission}
+                  uniqueBrokerages={uniqueBrokerages}
+                />
               </PDFViewer>
             </div>
           </div>

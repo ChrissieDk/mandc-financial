@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import Products from "./components/Products";
 import Services from "./components/Services";
-import ContactUs from "./components/contactUs";
+import ContactUs from "./components/ContactUs";
 import SignInModal from "./components/SignIn";
 import Dashboard from "./components/Dashboard";
 
@@ -15,7 +15,7 @@ const AppContent: React.FC = () => {
   const navigate = useNavigate();
 
   const handleSignIn = (email: string, password: string) => {
-    // Implement your sign-in logic here
+    // Implement sign-in logic here
     navigate("/dashboard");
     setIsSignInModalOpen(false);
   };
