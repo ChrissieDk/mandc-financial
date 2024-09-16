@@ -1,27 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavBar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import Footer from "./components/Footer";
-import AboutUs from "./components/AboutUs";
-import Products from "./components/Products";
-import Services from "./components/Services";
-import ContactUs from "./components/contactUs";
+import { BrowserRouter as Router } from "react-router-dom";
+import AppContent from "./AppContent";
 
 const App: React.FC = () => {
   return (
     <Router basename="/mandc-financial">
-      <div>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<HeroSection />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/services" element={<Services />} />
-        </Routes>
-        <Footer />
-      </div>
+      <AppContent />
     </Router>
   );
 };

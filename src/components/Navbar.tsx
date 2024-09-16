@@ -2,12 +2,18 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/LOGO_WHITE.png";
+// import { useNavigate } from "react-router-dom";
 
-const NavBar: React.FC = () => {
+interface NavBarProps {
+  onSignInClick: () => void;
+}
+
+const NavBar: React.FC<NavBarProps> = ({ onSignInClick }) => {
   const location = useLocation();
   const [activeTab, setActiveTab] = useState<string>("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  // const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => {
@@ -102,10 +108,29 @@ const NavBar: React.FC = () => {
             Contact Us
           </Link>
         </li>
+        {!isMobile && (
+          <button
+            onClick={onSignInClick}
+            className="bg-brightGreen text-darkGreen px-4 py-2 rounded-md hover:bg-green-400 transition-colors duration-300"
+            aria-label="Sign In"
+          >
+            Sign In
+          </button>
+        )}
       </ul>
 
-      {/* Empty div to balance the layout on larger screens */}
-      {!isMobile && <div className="flex-shrink-0 w-36"></div>}
+      {/* Sign In button for larger screens */}
+      {isMobile && (
+        <li className="mt-4">
+          <button
+            onClick={onSignInClick}
+            className="bg-brightGreen text-darkGreen px-4 py-2 rounded-md hover:bg-green-400 transition-colors duration-300 w-full"
+            aria-label="Sign In"
+          >
+            Sign In
+          </button>
+        </li>
+      )}
     </nav>
   );
 };
