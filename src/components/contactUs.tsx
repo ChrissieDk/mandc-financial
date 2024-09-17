@@ -95,8 +95,7 @@ const ContactUs: React.FC = () => {
                 <div className="col-span-6 sm:col-span-3">
                   <label
                     htmlFor="surname"
-                    p-2
-                    className="block text-sm font-medium text-gray-700"
+                    className="block text-sm font-medium text-gray-700 "
                   >
                     Surname
                   </label>
