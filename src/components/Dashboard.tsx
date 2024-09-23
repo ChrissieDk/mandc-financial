@@ -17,8 +17,8 @@ const Dashboard: React.FC = () => {
     const fetchCommissionData = () => {
       const mockData: CommissionEntry[] = [
         {
-          Region: "LIBCO-PE",
-          Brokerage: "Randmore Investments CC",
+          REGION: "LIBCO-PE",
+          BROKERAGE: "Randmore Investments CC",
           POLICY_NUMBER: "1151982573",
           PH_SURNAME: "MHLONGO",
           LOAD_DATE: "2013/03/04",
@@ -31,8 +31,8 @@ const Dashboard: React.FC = () => {
           COMM_TYPE: "First Year",
         },
         {
-          Region: "LIBCO-PE",
-          Brokerage: "Randmore Investments CC",
+          REGION: "LIBCO-PE",
+          BROKERAGE: "Randmore Investments CC",
           POLICY_NUMBER: "1151982573",
           PH_SURNAME: "MHLONGO",
           LOAD_DATE: "2013/03/04",
@@ -45,8 +45,8 @@ const Dashboard: React.FC = () => {
           COMM_TYPE: "First Year",
         },
         {
-          Region: "LIBCO-PE",
-          Brokerage: "Randmore Investments CC",
+          REGION: "LIBCO-PE",
+          BROKERAGE: "Randmore Investments CC",
           POLICY_NUMBER: "1151982573",
           PH_SURNAME: "MHLONGO",
           LOAD_DATE: "2013/03/04",
@@ -59,8 +59,8 @@ const Dashboard: React.FC = () => {
           COMM_TYPE: "First Year",
         },
         {
-          Region: "LIBCO-PE",
-          Brokerage: "Randmore Investments CC",
+          REGION: "LIBCO-PE",
+          BROKERAGE: "Randmore Investments CC",
           POLICY_NUMBER: "1151982573",
           PH_SURNAME: "MHLONGO",
           LOAD_DATE: "2013/03/04",
@@ -73,8 +73,8 @@ const Dashboard: React.FC = () => {
           COMM_TYPE: "First Year",
         },
         {
-          Region: "LIBCO-PE",
-          Brokerage: "Randmore Investments CC",
+          REGION: "LIBCO-PE",
+          BROKERAGE: "Randmore Investments CC",
           POLICY_NUMBER: "1151982573",
           PH_SURNAME: "MHLONGO",
           LOAD_DATE: "2013/03/04",
@@ -87,8 +87,8 @@ const Dashboard: React.FC = () => {
           COMM_TYPE: "First Year",
         },
         {
-          Region: "LIBCO-PE",
-          Brokerage: "Randmore Investments CC",
+          REGION: "LIBCO-PE",
+          BROKERAGE: "Randmore Investments CC",
           POLICY_NUMBER: "1151982573",
           PH_SURNAME: "MHLONGO",
           LOAD_DATE: "2013/03/04",
@@ -112,7 +112,7 @@ const Dashboard: React.FC = () => {
     (sum, commission) => sum + commission.AMOUNT_DUE,
     0
   );
-  const uniqueBrokerages = [...new Set(commissions.map((c) => c.Brokerage))];
+  const uniqueBrokerages = [...new Set(commissions.map((c) => c.BROKERAGE))];
 
   // PDF Document component
 

@@ -18,23 +18,16 @@ const HeroSection: React.FC = () => {
       }}
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center px-8  lg:py-0">
-        {/* Left Section: 2/3 of the space on large screens, full width on small screens */}
         <div className="w-full lg:w-2/3 lg:pr-8 mb-8 lg:mb-0">
           <h1 className="text-3xl lg:text-5xl font-bold mb-4">
             Premier Financial Consulting and Advisory Services
           </h1>
-
           <p className="mb-8">
             At M&C Financial Services, we leverage over 30 years of expertise to
             empower businesses across South Africa with tailored financial
             consulting and broker management solutions.
           </p>
-
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-            {/* <button className="border-2 border-brightGreen text-brightGreen font-bold py-2 px-4 rounded hover:bg-brightGreen hover:text-black">
-              Talk to us
-            </button> */}
-            {/* change the button up top to link via Link to the contact us page  */}
             <Link
               to="/contact-us"
               className="border-2 border-brightGreen text-brightGreen font-bold py-2 px-4 rounded hover:bg-brightGreen hover:text-black"
@@ -44,7 +37,6 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Right Section: Masonry Layout on large screens, stacked on small screens */}
         <div className="w-full lg:w-1/3 grid grid-cols-12 grid-rows-6 gap-4">
           <div className="col-span-8 row-span-3 bg-white rounded-xl shadow-lg overflow-hidden">
             <img

@@ -58,7 +58,7 @@ const NavBar: React.FC<NavBarProps> = ({ onSignInClick }) => {
 
       {/* Navigation links */}
       <ul
-        className={`w-full md:w-auto md:flex md:space-x-6 text-white ${
+        className={`w-full md:w-auto md:flex md:space-x-6 text-white my-auto ${
           isMobile ? (isMenuOpen ? "block" : "hidden") : "flex"
         } md:static md:bg-transparent md:p-0 ${
           isMobile && isMenuOpen ? "mt-4" : ""
@@ -118,19 +118,6 @@ const NavBar: React.FC<NavBarProps> = ({ onSignInClick }) => {
           </button>
         )}
       </ul>
-
-      {/* Sign In button for larger screens */}
-      {isMobile && (
-        <li className="mt-4">
-          <button
-            onClick={onSignInClick}
-            className="bg-brightGreen text-darkGreen px-4 py-2 rounded-md hover:bg-green-400 transition-colors duration-300 w-full"
-            aria-label="Sign In"
-          >
-            Sign In
-          </button>
-        </li>
-      )}
     </nav>
   );
 };

@@ -13,23 +13,30 @@ const products = [
   },
   {
     id: 2,
-    name: "Coming Soon...",
+    name: "Repatriation",
     description:
-      "We are working on new products to better serve you. Check back soon!",
+      "Repatriation takes care of all the logistics and associated costs involved in returning your loved one to their final resting place within South Africa. From transportation to documentation, we ensure a smooth process, offering peace of mind during a difficult time. This benefit covers the repatriation of mortal remains of a Life Assured to the funeral home or parlour chosen by the claimant, closest to the place of burial. Important: This benefit is for use within the Republic of South Africa. The place of death and burial must both be in South Africa.",
     logo: placeholderLogo,
   },
   {
     id: 3,
-    name: "Coming soon...",
+    name: "Health Coach",
     description:
-      "We are working on new products to better serve you. Check back soon!",
+      "Our health coach takes a holistic approach to transforming your habits. With daily check-ins, you can enhance your routine, incorporating regular exercise and increased water intake, making healthier choices overall.",
     logo: placeholderLogo,
   },
   {
     id: 4,
-    name: "Coming soon...",
+    name: "Symptom Check",
     description:
-      "We are working on new products to better serve you. Check back soon!",
+      "Your AI-powered health bot. We have included a smart digital assistant to enhance personalised healthcare. Our bot provides quick and reliable symptom assessments, potential causes and recommended solutions. It helps you take control of your health and well-being with just a few clicks, available to you 24 hours a day.",
+    logo: placeholderLogo,
+  },
+  {
+    id: 5,
+    name: "FeelBetterFast Pharmacy Voucher",
+    description:
+      "A voucher redeemable at your local FeelBetterFast network pharmacy, this service efficiently addresses minor health concerns, as well as offering preventative tests and vaccinations so that you can take control of your health. Important: The voucher is generated only for Amber or Red Outcomes from the Symptom Checker. If the outcome is Amber or Red you will be prompted to contact our Call Centre. An agent can issue you with a FeelBetterFast voucher.",
     logo: placeholderLogo,
   },
 ];
@@ -76,7 +83,6 @@ const Products = () => {
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
-
           <Services />
         </div>
       </section>

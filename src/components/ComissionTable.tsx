@@ -30,8 +30,8 @@ const CommissionTable: React.FC<CommissionTableProps> = ({ commissions }) => {
               key={index}
               className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}
             >
-              <td className="px-4 py-2">{record.Region}</td>
-              <td className="px-4 py-2">{record.Brokerage}</td>
+              <td className="px-4 py-2">{record.REGION}</td>
+              <td className="px-4 py-2">{record.BROKERAGE}</td>
               <td className="px-4 py-2">{record.POLICY_NUMBER}</td>
               <td className="px-4 py-2">{record.PH_SURNAME}</td>
               <td className="px-4 py-2">{record.LOAD_DATE}</td>

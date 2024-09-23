@@ -13,8 +13,8 @@ import Dashboard from "./components/Dashboard";
 const AppContent: React.FC = () => {
   const [isSignInModalOpen, setIsSignInModalOpen] = useState(false);
   const navigate = useNavigate();
-
-  const handleSignIn = (email: string, password: string) => {
+  // email: string, password: string
+  const handleSignIn = () => {
     // Implement sign-in logic here
     navigate("/dashboard");
     setIsSignInModalOpen(false);

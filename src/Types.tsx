@@ -1,6 +1,6 @@
 export interface CommissionEntry {
-  Region: string;
-  Brokerage: string;
+  REGION: string;
+  BROKERAGE: string;
   POLICY_NUMBER: string;
   PH_SURNAME: string;
   LOAD_DATE: string;

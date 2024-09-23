@@ -11,13 +11,15 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     marginBottom: 10,
-
-    textAlign: "center",
+    display: "flex",
+    textAlign: "left",
     fontWeight: "bold",
+    color: "#123C28",
   },
   subtitle: {
     fontSize: 12,
     marginBottom: 6,
+    color: "#123C28",
   },
   table: {
     display: "flex",
@@ -115,10 +117,10 @@ const PdfDocGenerate: React.FC<PdfDocGenerateProps> = ({
         {commissions.map((comm, index) => (
           <View style={styles.tableRow} key={index}>
             <View style={styles.tableCol}>
-              <Text style={styles.tableCell}>{comm.Region}</Text>
+              <Text style={styles.tableCell}>{comm.REGION}</Text>
             </View>
             <View style={styles.tableCol}>
-              <Text style={styles.tableCell}>{comm.Brokerage}</Text>
+              <Text style={styles.tableCell}>{comm.BROKERAGE}</Text>
             </View>
             <View style={styles.tableCol}>
               <Text style={styles.tableCell}>{comm.POLICY_NUMBER}</Text>

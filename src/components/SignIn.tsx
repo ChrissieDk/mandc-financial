@@ -70,7 +70,7 @@ const SignInModal: React.FC<SignInModalProps> = ({
             <button
               type="button"
               onClick={onClose}
-              className="text-gray-600 hover:text-gray-800"
+              className="hidden md:block text-gray-600 hover:text-gray-800"
             >
               Cancel
             </button>
