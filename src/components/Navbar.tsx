@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/LOGO_WHITE.png";
-// import { useNavigate } from "react-router-dom";
 
 interface NavBarProps {
   onSignInClick: () => void;
@@ -116,6 +115,16 @@ const NavBar: React.FC<NavBarProps> = ({ onSignInClick }) => {
           >
             Sign In
           </button>
+        )}
+        {isMobile && (
+          <li>
+            <button
+              onClick={onSignInClick}
+              className="text-white hover:text-brightGreen"
+            >
+              Sign In
+            </button>
+          </li>
         )}
       </ul>
     </nav>

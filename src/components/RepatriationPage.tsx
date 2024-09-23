@@ -4,7 +4,9 @@ import { FaPhone, FaEnvelope, FaExclamationCircle } from "react-icons/fa";
 const RepatriationPage: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 font-sans">
-      <h1 className="text-3xl font-bold mb-6 text-center">Repatriation</h1>
+      <h1 className="text-darkGreen text-3xl font-bold mb-6 text-center">
+        Repatriation
+      </h1>
 
       <section className="mb-8">
         <p className="mb-4">
@@ -30,7 +32,7 @@ const RepatriationPage: React.FC = () => {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">
+        <h2 className="text-darkGreen text-2xl font-semibold mb-4">
           Claiming Your Benefit: A Simple Guide
         </h2>
         <p className="mb-2">To claim, simply:</p>
@@ -53,7 +55,9 @@ const RepatriationPage: React.FC = () => {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Required Documents</h2>
+        <h2 className="text-darkGreen text-2xl font-semibold mb-4">
+          Required Documents
+        </h2>
         <ul className="list-disc list-inside">
           <li>Certified copies of the claimant or beneficiary's ID</li>
           <li>Death certificate</li>

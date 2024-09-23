@@ -1,10 +1,17 @@
 import React from "react";
-import { FaCheckCircle, FaExclamationCircle } from "react-icons/fa";
+import {
+  FaCheckCircle,
+  FaExclamationCircle,
+  FaGlobe,
+  FaPhone,
+} from "react-icons/fa";
 
 const HealthCoachPage: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 font-sans">
-      <h1 className="text-3xl font-bold mb-6 text-center">Health Coach</h1>
+      <h1 className="text-darkGreen text-3xl font-bold mb-6 text-center">
+        Health Coach
+      </h1>
 
       <section className="mb-8">
         <p className="mb-4">
@@ -16,7 +23,9 @@ const HealthCoachPage: React.FC = () => {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">How to Use</h2>
+        <h2 className="text-darkGreen text-2xl font-semibold mb-4">
+          How to Use
+        </h2>
         <ol className="list-decimal list-inside mb-4">
           <li className="mb-2">
             Access your client zone from our website{" "}
@@ -40,7 +49,9 @@ const HealthCoachPage: React.FC = () => {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Key Features</h2>
+        <h2 className="text-darkGreen text-2xl font-semibold mb-4">
+          Key Features
+        </h2>
         <ul className="list-none">
           <li className="flex items-start mb-2">
             <FaCheckCircle className="text-green-500 mr-2 mt-1" />
@@ -70,6 +81,26 @@ const HealthCoachPage: React.FC = () => {
           with your Health Coach for the best results.
         </p>
       </div>
+
+      <footer className="mt-8 text-center text-sm text-gray-600">
+        <p>
+          For more information or to access the Health Coach, visit our website:
+        </p>
+        <div className="flex justify-center space-x-4 mt-2">
+          <a
+            href="https://www.crownfuneral.co.za"
+            className="flex items-center hover:text-blue-600"
+          >
+            <FaGlobe className="mr-1" /> www.crownfuneral.co.za
+          </a>
+          <a
+            href="tel:0873721094"
+            className="flex items-center hover:text-blue-600"
+          >
+            <FaPhone className="mr-1" /> 087 372 1094
+          </a>
+        </div>
+      </footer>
     </div>
   );
 };
