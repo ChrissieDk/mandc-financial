@@ -1,10 +1,12 @@
 import React from "react";
-import { FaExclamationCircle, FaCheckCircle } from "react-icons/fa";
+import { FaExclamationCircle, FaCheckCircle, FaGlobe } from "react-icons/fa";
 
 const SymptomCheckerPage: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 font-sans">
-      <h1 className="text-3xl font-bold mb-6 text-center">Symptom Checker</h1>
+      <h1 className="text-darkGreen text-3xl font-bold mb-6 text-center">
+        Symptom Checker
+      </h1>
 
       <section className="mb-8">
         <p className="mb-4">
@@ -17,7 +19,9 @@ const SymptomCheckerPage: React.FC = () => {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">How to Use</h2>
+        <h2 className="text-darkGreen text-2xl font-semibold mb-4">
+          How to Use
+        </h2>
         <ol className="list-decimal list-inside mb-4">
           <li className="mb-2">
             Access your client zone from our website{" "}
@@ -37,7 +41,9 @@ const SymptomCheckerPage: React.FC = () => {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Key Features</h2>
+        <h2 className="text-darkGreen text-2xl font-semibold mb-4">
+          Key Features
+        </h2>
         <ul className="list-none">
           <li className="flex items-start mb-2">
             <FaCheckCircle className="text-green-500 mr-2 mt-1" />
@@ -69,7 +75,7 @@ const SymptomCheckerPage: React.FC = () => {
         </p>
       </div>
 
-      {/* <footer className="mt-8 text-center text-sm text-gray-600">
+      <footer className="mt-8 text-center text-sm text-gray-600">
         <p>
           For more information or to access the Symptom Checker, visit our
           website:
@@ -82,7 +88,7 @@ const SymptomCheckerPage: React.FC = () => {
             <FaGlobe className="mr-1" /> www.crownfuneral.co.za
           </a>
         </div>
-      </footer> */}
+      </footer>
     </div>
   );
 };

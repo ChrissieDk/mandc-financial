@@ -1,10 +1,15 @@
 import React from "react";
-import { FaExclamationCircle, FaCheckCircle } from "react-icons/fa";
+import {
+  FaExclamationCircle,
+  FaCheckCircle,
+  FaGlobe,
+  FaPhone,
+} from "react-icons/fa";
 
 const FeelBetterFastPage: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 font-sans">
-      <h1 className="text-3xl font-bold mb-6 text-center">
+      <h1 className="text-darkGreen text-3xl font-bold mb-6 text-center">
         FeelBetterFast Pharmacy Voucher
       </h1>
 
@@ -30,7 +35,9 @@ const FeelBetterFastPage: React.FC = () => {
       </div>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">How to Use This Benefit</h2>
+        <h2 className="text-darkGreen text-2xl font-semibold mb-4">
+          How to Use This Benefit
+        </h2>
         <ol className="list-decimal list-inside mb-4">
           <li className="mb-2">
             Access your client zone from our website{" "}
@@ -62,7 +69,9 @@ const FeelBetterFastPage: React.FC = () => {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Key Features</h2>
+        <h2 className="text-darkGreen text-2xl font-semibold mb-4">
+          Key Features
+        </h2>
         <ul className="list-none">
           <li className="flex items-start mb-2">
             <FaCheckCircle className="text-green-500 mr-2 mt-1" />
@@ -83,7 +92,7 @@ const FeelBetterFastPage: React.FC = () => {
         </ul>
       </section>
 
-      {/* <footer className="mt-8 text-center text-sm text-gray-600">
+      <footer className="mt-8 text-center text-sm text-gray-600">
         <p>
           For more information or to access the Symptom Checker, visit our
           website:
@@ -102,7 +111,7 @@ const FeelBetterFastPage: React.FC = () => {
             <FaPhone className="mr-1" /> 087 372 1094
           </a>
         </div>
-      </footer> */}
+      </footer>
     </div>
   );
 };
