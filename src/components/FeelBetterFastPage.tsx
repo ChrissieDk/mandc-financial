@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  FaExclamationCircle,
-  FaGlobe,
-  FaCheckCircle,
-  FaPhone,
-} from "react-icons/fa";
+import { FaExclamationCircle, FaCheckCircle } from "react-icons/fa";
 
 const FeelBetterFastPage: React.FC = () => {
   return (
