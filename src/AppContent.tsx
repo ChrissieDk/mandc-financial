@@ -9,6 +9,10 @@ import Services from "./components/Services";
 import ContactUs from "./components/ContactUs";
 import SignInModal from "./components/SignIn";
 import Dashboard from "./components/Dashboard";
+import RepatriationPage from "./components/RepatriationPage";
+import HealthCoachPage from "./components/HealthCoachPage";
+import SymptomCheckerPage from "./components/SymptomCheckerPage";
+import FeelBetterFastPage from "./components/FeelBetterFastPage";
 
 const AppContent: React.FC = () => {
   const [isSignInModalOpen, setIsSignInModalOpen] = useState(false);
@@ -30,6 +34,16 @@ const AppContent: React.FC = () => {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/services" element={<Services />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/products/repatriation" element={<RepatriationPage />} />
+        <Route path="/products/health-coach" element={<HealthCoachPage />} />
+        <Route
+          path="/products/symptom-check"
+          element={<SymptomCheckerPage />}
+        />
+        <Route
+          path="/products/feel-better-fast"
+          element={<FeelBetterFastPage />}
+        />
       </Routes>
       <Footer />
       <SignInModal
