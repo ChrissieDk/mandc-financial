@@ -64,7 +64,7 @@ const NavBar: React.FC<NavBarProps> = ({ onSignInClick }) => {
         }`}
       >
         <li
-          className={`cursor-pointer pb-2 ${
+          className={`cursor-pointer pb-2 hover:text-brightGreen ${
             activeTab === "Home"
               ? "text-brightGreen border-b-2 border-brightGreen"
               : ""
@@ -75,7 +75,7 @@ const NavBar: React.FC<NavBarProps> = ({ onSignInClick }) => {
           </Link>
         </li>
         <li
-          className={`cursor-pointer pb-2 ${
+          className={`cursor-pointer pb-2 hover:text-brightGreen ${
             activeTab === "About us"
               ? "text-brightGreen border-b-2 border-brightGreen"
               : ""
@@ -86,7 +86,7 @@ const NavBar: React.FC<NavBarProps> = ({ onSignInClick }) => {
           </Link>
         </li>
         <li
-          className={`cursor-pointer pb-2 ${
+          className={`cursor-pointer pb-2 hover:text-brightGreen ${
             activeTab === "Products"
               ? "text-brightGreen border-b-2 border-brightGreen"
               : ""
@@ -97,7 +97,7 @@ const NavBar: React.FC<NavBarProps> = ({ onSignInClick }) => {
           </Link>
         </li>
         <li
-          className={`cursor-pointer pb-2 ${
+          className={`cursor-pointer pb-2 hover:text-brightGreen ${
             activeTab === "Contact Us"
               ? "text-brightGreen border-b-2 border-brightGreen"
               : ""
