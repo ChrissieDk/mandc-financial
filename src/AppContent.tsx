@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import NavBar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
+import HeroSection from "./pages/HeroSection";
 import Footer from "./components/Footer";
-import AboutUs from "./components/AboutUs";
+import AboutUs from "./pages/AboutUs";
 import Products from "./components/Products";
 import Services from "./components/Services";
-import ContactUs from "./components/ContactUs";
+import ContactUs from "./pages/ContactUs";
 import SignInModal from "./components/SignIn";
-import Dashboard from "./components/Dashboard";
-import RepatriationPage from "./components/RepatriationPage";
-import HealthCoachPage from "./components/HealthCoachPage";
-import SymptomCheckerPage from "./components/SymptomCheckerPage";
-import FeelBetterFastPage from "./components/FeelBetterFastPage";
+import Dashboard from "./pages/Dashboard";
+import RepatriationPage from "./pages/RepatriationPage";
+import HealthCoachPage from "./pages/HealthCoachPage";
+import SymptomCheckerPage from "./pages/SymptomCheckerPage";
+import FeelBetterFastPage from "./pages/FeelBetterFastPage";
 
 const AppContent: React.FC = () => {
   const [isSignInModalOpen, setIsSignInModalOpen] = useState(false);

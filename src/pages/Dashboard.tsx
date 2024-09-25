@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { CommissionEntry } from "../Types";
-import CommissionTable from "./ComissionTable";
+import CommissionTable from "../components/ComissionTable";
 import { PDFViewer } from "@react-pdf/renderer";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
-import PdfDocGenerate from "./PdfDocGenerate";
+import PdfDocGenerate from "../components/PdfDocGenerate";
 
 // Create styles for PDF
 
