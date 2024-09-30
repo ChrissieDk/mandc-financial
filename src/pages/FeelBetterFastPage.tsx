@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  FaExclamationCircle,
-  FaCheckCircle,
-  FaGlobe,
-  FaPhone,
-} from "react-icons/fa";
+import { FaExclamationCircle, FaCheckCircle } from "react-icons/fa";
 
 const FeelBetterFastPage: React.FC = () => {
   return (
@@ -34,7 +29,7 @@ const FeelBetterFastPage: React.FC = () => {
         </p>
       </div>
 
-      <section className="mb-8">
+      {/* <section className="mb-8">
         <h2 className="text-darkGreen text-2xl font-semibold mb-4">
           How to Use This Benefit
         </h2>
@@ -66,7 +61,7 @@ const FeelBetterFastPage: React.FC = () => {
             ingredients that address your symptoms.
           </li>
         </ol>
-      </section>
+      </section> */}
 
       <section className="mb-8">
         <h2 className="text-darkGreen text-2xl font-semibold mb-4">
@@ -92,7 +87,7 @@ const FeelBetterFastPage: React.FC = () => {
         </ul>
       </section>
 
-      <footer className="mt-8 text-center text-sm text-gray-600">
+      {/* <footer className="mt-8 text-center text-sm text-gray-600">
         <p>
           For more information or to access the Symptom Checker, visit our
           website:
@@ -111,7 +106,7 @@ const FeelBetterFastPage: React.FC = () => {
             <FaPhone className="mr-1" /> 087 372 1094
           </a>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { FaPhone, FaEnvelope, FaExclamationCircle } from "react-icons/fa";
+import { FaExclamationCircle } from "react-icons/fa";
 
 const RepatriationPage: React.FC = () => {
   return (
@@ -31,7 +31,7 @@ const RepatriationPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="mb-8">
+      {/* <section className="mb-8">
         <h2 className="text-darkGreen text-2xl font-semibold mb-4">
           Claiming Your Benefit: A Simple Guide
         </h2>
@@ -52,7 +52,7 @@ const RepatriationPage: React.FC = () => {
           </li>
           <li>Our team will send you a claim form to complete</li>
         </ol>
-      </section>
+      </section> */}
 
       <section className="mb-8">
         <h2 className="text-darkGreen text-2xl font-semibold mb-4">
@@ -78,7 +78,7 @@ const RepatriationPage: React.FC = () => {
         </p>
       </div>
 
-      <footer className="mt-8 text-center text-sm text-gray-600">
+      {/* <footer className="mt-8 text-center text-sm text-gray-600">
         <p>For any inquiries, please contact us:</p>
         <div className="flex justify-center space-x-4 mt-2">
           <a
@@ -94,7 +94,7 @@ const RepatriationPage: React.FC = () => {
             <FaEnvelope className="mr-1" /> claims@crownfuneral.co.za
           </a>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };

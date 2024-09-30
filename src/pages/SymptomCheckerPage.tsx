@@ -1,5 +1,5 @@
 import React from "react";
-import { FaExclamationCircle, FaCheckCircle, FaGlobe } from "react-icons/fa";
+import { FaExclamationCircle, FaCheckCircle } from "react-icons/fa";
 
 const SymptomCheckerPage: React.FC = () => {
   return (
@@ -18,7 +18,7 @@ const SymptomCheckerPage: React.FC = () => {
         </p>
       </section>
 
-      <section className="mb-8">
+      {/* <section className="mb-8">
         <h2 className="text-darkGreen text-2xl font-semibold mb-4">
           How to Use
         </h2>
@@ -38,7 +38,7 @@ const SymptomCheckerPage: React.FC = () => {
             suitable solution to your symptoms.
           </li>
         </ol>
-      </section>
+      </section> */}
 
       <section className="mb-8">
         <h2 className="text-darkGreen text-2xl font-semibold mb-4">
@@ -75,7 +75,7 @@ const SymptomCheckerPage: React.FC = () => {
         </p>
       </div>
 
-      <footer className="mt-8 text-center text-sm text-gray-600">
+      {/* <footer className="mt-8 text-center text-sm text-gray-600">
         <p>
           For more information or to access the Symptom Checker, visit our
           website:
@@ -88,7 +88,7 @@ const SymptomCheckerPage: React.FC = () => {
             <FaGlobe className="mr-1" /> www.crownfuneral.co.za
           </a>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };

@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  FaCheckCircle,
-  FaExclamationCircle,
-  FaGlobe,
-  FaPhone,
-} from "react-icons/fa";
+import { FaCheckCircle, FaExclamationCircle } from "react-icons/fa";
 
 const HealthCoachPage: React.FC = () => {
   return (
@@ -22,7 +17,7 @@ const HealthCoachPage: React.FC = () => {
         </p>
       </section>
 
-      <section className="mb-8">
+      {/* <section className="mb-8">
         <h2 className="text-darkGreen text-2xl font-semibold mb-4">
           How to Use
         </h2>
@@ -46,7 +41,7 @@ const HealthCoachPage: React.FC = () => {
             challenges based on the selected topics of interest.
           </li>
         </ol>
-      </section>
+      </section> */}
 
       <section className="mb-8">
         <h2 className="text-darkGreen text-2xl font-semibold mb-4">
@@ -82,7 +77,7 @@ const HealthCoachPage: React.FC = () => {
         </p>
       </div>
 
-      <footer className="mt-8 text-center text-sm text-gray-600">
+      {/* <footer className="mt-8 text-center text-sm text-gray-600">
         <p>
           For more information or to access the Health Coach, visit our website:
         </p>
@@ -100,7 +95,7 @@ const HealthCoachPage: React.FC = () => {
             <FaPhone className="mr-1" /> 087 372 1094
           </a>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 };
