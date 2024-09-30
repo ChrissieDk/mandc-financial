@@ -7,7 +7,7 @@ interface NavBarProps {
   onSignInClick: () => void;
 }
 
-const NavBar: React.FC<NavBarProps> = ({ onSignInClick }) => {
+const NavBar: React.FC<NavBarProps> = ({}) => {
   const location = useLocation();
   const [activeTab, setActiveTab] = useState<string>("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -107,7 +107,7 @@ const NavBar: React.FC<NavBarProps> = ({ onSignInClick }) => {
             Contact Us
           </Link>
         </li>
-        {!isMobile && (
+        {/* {!isMobile && (
           <button
             onClick={onSignInClick}
             className="bg-brightGreen text-darkGreen px-4 py-2 rounded-md hover:bg-green-400 transition-colors duration-300"
@@ -125,7 +125,7 @@ const NavBar: React.FC<NavBarProps> = ({ onSignInClick }) => {
               Sign In
             </button>
           </li>
-        )}
+        )} */}
       </ul>
     </nav>
   );

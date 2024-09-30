@@ -1,4 +1,4 @@
-import { VercelRequest, VercelResponse } from "@vercel/node";
+import type { VercelRequest, VercelResponse } from "@vercel/node";
 import nodemailer from "nodemailer";
 
 interface EmailData {
@@ -8,7 +8,7 @@ interface EmailData {
   message: string;
 }
 
-export default async (req: VercelRequest, res: VercelResponse) => {
+const handler = async (req: VercelRequest, res: VercelResponse) => {
   if (req.method !== "POST") {
     return res.status(405).end("Method Not Allowed");
   }
@@ -41,6 +41,13 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     res.status(200).json({ message: "Email sent successfully" });
   } catch (error) {
     console.error("Error sending email:", error);
-    res.status(500).json({ error: "Error sending email" });
+    res
+      .status(500)
+      .json({
+        error: "Error sending email",
+        details: (error as Error).message,
+      });
   }
 };
+
+export default handler;
