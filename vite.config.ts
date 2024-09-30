@@ -6,7 +6,7 @@ import autoprefixer from "autoprefixer";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/mandc-financial/",
+  // base: "/mandc-financial/",
   css: {
     postcss: {
       plugins: [tailwindcss, autoprefixer],
