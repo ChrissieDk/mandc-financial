@@ -32,13 +32,21 @@ module.exports = async (req, res) => {
   console.log("Transporter created");
 
   const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: "perry@mandcconsult.co.za",
+    from: `"Contact Form" <${process.env.EMAIL_USER}>`,
+    to: process.env.EMAIL_USER,
+    replyTo: email,
     subject: "New Contact Form Submission",
     text: `
       Name: ${name} ${surname}
       Email: ${email}
       Message: ${message}
+    `,
+    html: `
+      <h2>New Contact Form Submission</h2>
+      <p><strong>Name:</strong> ${name} ${surname}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Message:</strong></p>
+      <p>${message}</p>
     `,
   };
 
