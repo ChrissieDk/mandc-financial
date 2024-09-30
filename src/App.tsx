@@ -4,7 +4,7 @@ import AppContent from "./AppContent";
 
 const App: React.FC = () => {
   return (
-    <Router basename="/mandc-financial">
+    <Router>
       <AppContent />
     </Router>
   );
