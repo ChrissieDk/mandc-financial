@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import emailjs from "emailjs-com";
+import React, { useState } from "react";
+import axios from "axios";
 
 const ContactUs: React.FC = () => {
   const [name, setName] = useState("");
@@ -9,47 +9,32 @@ const ContactUs: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
 
-  useEffect(() => {
-    emailjs.init("4LNj0fAKokiEK_iEY");
-  }, []);
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitMessage("");
 
-    emailjs
-      .send(
-        "service_g8a3kdc", // Replace with your actual Service ID
-        "service_g8a3kdc", // Yes, put the Service ID here again instead of a Template ID
-        {
-          to_name: "Perry", // Or whatever name you want to use
-          from_name: `${name} ${surname}`,
-          from_email: email,
-          message: message,
-          reply_to: email,
-          subject: "New Contact Form Submission",
-        }
-      )
-      .then(
-        () => {
-          setIsSubmitting(false);
-          setSubmitMessage(
-            "Thank you for your message. We will get back to you soon!"
-          );
-          setName("");
-          setSurname("");
-          setEmail("");
-          setMessage("");
-        },
-        (error) => {
-          setIsSubmitting(false);
-          setSubmitMessage(
-            "Oops! Something went wrong. Please try again later."
-          );
-          console.error("EmailJS error:", error);
-        }
+    try {
+      await axios.post("/api/send-email", {
+        name,
+        surname,
+        email,
+        message,
+      });
+
+      setSubmitMessage(
+        "Thank you for your message. We will get back to you soon!"
       );
+      setName("");
+      setSurname("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      console.error("Error sending email:", error);
+      setSubmitMessage("Oops! Something went wrong. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
